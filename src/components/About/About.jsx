@@ -10,10 +10,13 @@ export default function About() {
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 h-full flex items-center justify-center">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-xl">
             About <span className="text-yellow-400">Us</span>
           </h1>
+          <p className="text-center text-white mt-2">
+            Learn about our journey, mission, and dedication to making your travel dreams come true.
+          </p>
         </div>
       </div>
 

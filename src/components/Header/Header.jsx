@@ -1,5 +1,6 @@
 import { Mail, Menu, Phone, Rocket, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [active, setActive] = useState("Home");
@@ -48,22 +49,64 @@ export default function Header() {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8">
-            {menuItems.map((item) => (
-              <li
-                key={item}
-                onClick={() => setActive(item)}
-                className={`cursor-pointer font-medium text-gray-800 px-3 py-2 rounded-lg 
-                  ${
-                    active === item
-                      ? "bg-blue-50 text-blue-600 font-semibold"
-                      : "hover:text-blue-600"
-                  }`}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
+        <ul className="hidden md:flex items-center gap-8">
+  <li>
+    <Link
+      to="/"
+      className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
+        active === "Home"
+          ? "bg-blue-50 text-blue-600 font-semibold"
+          : "hover:text-blue-600"
+      }`}
+      onClick={() => setActive("Home")}
+    >
+      Home
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      to="/about"
+      className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
+        active === "About Us"
+          ? "bg-blue-50 text-blue-600 font-semibold"
+          : "hover:text-blue-600"
+      }`}
+      onClick={() => setActive("About Us")}
+    >
+      About Us
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      to="/tour"
+      className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
+        active === "Tour Packages"
+          ? "bg-blue-50 text-blue-600 font-semibold"
+          : "hover:text-blue-600"
+      }`}
+      onClick={() => setActive("Tour Packages")}
+    >
+      Tour Packages
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      to="/contact"
+      className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
+        active === "Contact"
+          ? "bg-blue-50 text-blue-600 font-semibold"
+          : "hover:text-blue-600"
+      }`}
+      onClick={() => setActive("Contact")}
+    >
+      Contact
+    </Link>
+  </li>
+</ul>
+
 
           {/* ⭐ BOOK NOW button (Desktop) */}
           <button className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md font-semibold ml-4">

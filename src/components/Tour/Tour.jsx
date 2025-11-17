@@ -1,7 +1,7 @@
 import { ArrowRight, Clock, MapPin } from "lucide-react";
 import { useState } from "react";
 
-export default function TourPackages() {
+export default function Tour() {
   const categories = ["All", "Beach", "Hill", "Spiritual", "Wildlife"];
 
   const [active, setActive] = useState("All");
@@ -13,7 +13,7 @@ export default function TourPackages() {
       duration: "2 Nights / 3 Days",
       price: "₹6,499",
       location: "Puri, Odisha",
-      img: "https://images.unsplash.com/photo-1602016753121-8b8e79fba399",
+      img: "https://images.pexels.com/photos/27023262/pexels-photo-27023262.jpeg",
     },
     {
       title: "Goa Beach Holiday",
@@ -21,7 +21,7 @@ export default function TourPackages() {
       duration: "3 Nights / 4 Days",
       price: "₹11,999",
       location: "Goa",
-      img: "https://plus.unsplash.com/premium_photo-1661963545654-57f75ad1ff20",
+      img: "https://images.pexels.com/photos/88212/pexels-photo-88212.jpeg",
     },
     {
       title: "Shimla Hill Station",
@@ -37,7 +37,7 @@ export default function TourPackages() {
       duration: "1 Night / 2 Days",
       price: "₹4,999",
       location: "Odisha",
-      img: "https://plus.unsplash.com/premium_photo-1675814089486-fc66048cd81d",
+      img: "https://images.pexels.com/photos/17045419/pexels-photo-17045419.jpeg",
     },
     {
       title: "Kerala Backwaters",
@@ -45,7 +45,7 @@ export default function TourPackages() {
       duration: "3 Nights / 4 Days",
       price: "₹16,499",
       location: "Kerala",
-      img: "https://plus.unsplash.com/premium_photo-1675714801928-4fc1921a3f8a",
+      img: "https://images.pexels.com/photos/30778230/pexels-photo-30778230.jpeg",
     },
     {
       title: "Darjeeling Himalayan Trip",
@@ -53,7 +53,7 @@ export default function TourPackages() {
       duration: "3 Nights / 4 Days",
       price: "₹12,999",
       location: "West Bengal",
-      img: "https://images.unsplash.com/photo-1499696786230-29e776323f81",
+      img: "https://images.pexels.com/photos/103875/pexels-photo-103875.jpeg",
     },
   ];
 
@@ -66,16 +66,19 @@ export default function TourPackages() {
 
       {/* HERO BANNER */}
       <div
-        className="h-[50vh] bg-cover bg-center flex items-center justify-center relative"
+        className="h-[50vh] bg-cover bg-center flex flex-col items-center justify-center relative"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1493558103817-58b2924bce98')",
+            "url('https://images.pexels.com/photos/29547310/pexels-photo-29547310.jpeg')",
         }}
       >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold text-white drop-shadow-xl">
-          Tour Packages
+        <div className="absolute inset-0 bg-black/30"></div>
+        <h1 className="text-4xl font-extrabold text-center text-white drop-shadow-sm">
+          Explore Our Best <span className="text-yellow-400">Tour Packages </span>
         </h1>
+        <p className="text-white text-center mt-2">
+          Choose from handpicked tours designed to give you unforgettable experiences.
+        </p>
       </div>
 
       <div className="container mx-auto px-4 py-14">

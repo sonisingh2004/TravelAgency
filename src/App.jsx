@@ -1,22 +1,21 @@
-import { useState } from 'react'
-import About from './components/About/About'
-import Header from './components/Header/Header'
-import Home from './components/Home/Home'
-import Tour from './components/Tour/Tour'
+
+// import { useState } from 'react'
+// import FloatingWhatsapp from './components/FloatingWhatsapp'
+// import Footer from './components/Footer/Footer'
+// import Header from './components/Header/Header'
 
 
-function App() {
-  const [count, setCount] = useState(0)
+// function App() {
+//   const [count, setCount] = useState(0)
 
-  return (
-  <>
-    <Header/>
-    <Home/>
-    <About/>
-    <Tour/>
-    {/* <Footer/> */}
-  </>
-  )
-}
+//   return (
+//   <>
+//     <Header/>
+    
+//     <Footer/>
+//     <FloatingWhatsapp/>
+//   </>
+//   )
+// }
 
-export default App
+// export default App
