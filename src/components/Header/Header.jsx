@@ -16,10 +16,8 @@ export default function Header() {
   return (
     <div>
       {/* Top Bar */}
-      <div className="bg-blue-600 text-white text-sm py-2 px-16">
+      <div className=" bg-blue-600 text-white text-sm py-2 md:px-16">
         <div className="container mx-auto px-4 flex justify-between items-center">
-
-          {/* Left */}
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1">
               <Phone size={16} /> +91 91xxxx 44441
@@ -30,7 +28,6 @@ export default function Header() {
             </span>
           </div>
 
-          {/* Right */}
           <span className="flex items-center gap-1 bg-blue-700 px-3 py-1 rounded-full text-xs">
             <Rocket size={14} /> Best Travel Agency in Odisha.
           </span>
@@ -38,7 +35,7 @@ export default function Header() {
       </div>
 
       {/* Main Navbar */}
-      <div className="bg-white shadow px-16">
+      <div className=" bg-white shadow md:px-16 ">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
 
           {/* Logo */}
@@ -46,7 +43,7 @@ export default function Header() {
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyn6gwCt67Cil4OqZiXSQgDyCGzfnh-0RAfg&s"
               alt="logo"
-              className="h-14"
+              className="h-16"
             />
           </div>
 
@@ -68,7 +65,12 @@ export default function Header() {
             ))}
           </ul>
 
-          {/* Hamburger (Only Mobile) */}
+          {/* ⭐ BOOK NOW button (Desktop) */}
+          <button className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md font-semibold ml-4">
+            Book Now
+          </button>
+
+          {/* Hamburger (Mobile Only) */}
           <button
             className="md:hidden block"
             onClick={() => setOpenMenu(!openMenu)}
@@ -101,6 +103,12 @@ export default function Header() {
               ))}
             </ul>
 
+            {/* ⭐ BOOK NOW button (Mobile) */}
+            <div className="p-4">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold shadow-md">
+                Book Now
+              </button>
+            </div>
           </div>
         )}
       </div>
