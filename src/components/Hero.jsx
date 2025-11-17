@@ -116,7 +116,7 @@ export default function Hero() {
         </div>
 
         {/* 🔹 Right Glass Enquiry Form */}
-        <div className="w-full lg:w-[380px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-7 animate-slideUp mt-6 lg:mt-0">
+        <div className="hidden lg:block w-full lg:w-[380px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-7 animate-slideUp mt-6 lg:mt-0">
           <h2 className="text-2xl font-bold text-white mb-4">Quick Enquiry</h2>
 
           <form className="space-y-4">
