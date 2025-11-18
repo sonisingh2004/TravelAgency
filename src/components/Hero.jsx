@@ -47,35 +47,35 @@ export default function Hero() {
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="/src/assets/heroSlider/slide5.jpg"
+              src="https://images.pexels.com/photos/27023262/pexels-photo-27023262.jpeg"
             />
           </SwiperSlide>
           <SwiperSlide>
             
             <img
               className="w-full h-full object-cover"
-              src="/src/assets/heroSlider/slide6.jpg"
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="/src/assets/heroSlider/slide7.jpg"
+              src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="/src/assets/heroSlider/slide8.jpg"
+              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="/src/assets/heroSlider/slide9.jpg"
+              src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
           </SwiperSlide>
           <SwiperSlide>
