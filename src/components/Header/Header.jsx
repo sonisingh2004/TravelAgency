@@ -7,17 +7,16 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
 
   const menuItems = [
-    "Home",
-    "About Us",
-    "Tour Packages",
-    "Contact",
-    
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Tour Packages", path: "/tour" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
     <div>
       {/* Top Bar */}
-      <div className=" bg-blue-600 text-white text-sm py-2 md:px-16">
+      <div className="bg-blue-600 text-white text-sm py-2 md:px-16">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1">
@@ -36,7 +35,7 @@ export default function Header() {
       </div>
 
       {/* Main Navbar */}
-      <div className=" bg-white shadow md:px-16 ">
+      <div className="bg-white shadow md:px-16">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
 
           {/* Logo */}
@@ -49,66 +48,25 @@ export default function Header() {
           </div>
 
           {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8">
-  <li>
-    <Link
-      to="/"
-      className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
-        active === "Home"
-          ? "bg-blue-50 text-blue-600 font-semibold"
-          : "hover:text-blue-600"
-      }`}
-      onClick={() => setActive("Home")}
-    >
-      Home
-    </Link>
-  </li>
+          <ul className="hidden md:flex items-center gap-8">
+            {menuItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.path}
+                  className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
+                    active === item.name
+                      ? "bg-blue-50 text-blue-600 font-semibold"
+                      : "hover:text-blue-600"
+                  }`}
+                  onClick={() => setActive(item.name)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-  <li>
-    <Link
-      to="/about"
-      className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
-        active === "About Us"
-          ? "bg-blue-50 text-blue-600 font-semibold"
-          : "hover:text-blue-600"
-      }`}
-      onClick={() => setActive("About Us")}
-    >
-      About Us
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      to="/tour"
-      className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
-        active === "Tour Packages"
-          ? "bg-blue-50 text-blue-600 font-semibold"
-          : "hover:text-blue-600"
-      }`}
-      onClick={() => setActive("Tour Packages")}
-    >
-      Tour Packages
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      to="/contact"
-      className={`cursor-pointer font-medium px-3 py-2 rounded-lg ${
-        active === "Contact"
-          ? "bg-blue-50 text-blue-600 font-semibold"
-          : "hover:text-blue-600"
-      }`}
-      onClick={() => setActive("Contact")}
-    >
-      Contact
-    </Link>
-  </li>
-</ul>
-
-
-          {/* ⭐ BOOK NOW button (Desktop) */}
+          {/* ⭐ Book Now button (Desktop) */}
           <button className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md font-semibold ml-4">
             Book Now
           </button>
@@ -125,28 +83,30 @@ export default function Header() {
         {/* Mobile Menu */}
         {openMenu && (
           <div className="md:hidden bg-white shadow-inner border-t border-gray-200 animate-slideDown">
-
             <ul className="flex flex-col gap-1 p-4">
+
               {menuItems.map((item) => (
-                <li
-                  key={item}
-                  onClick={() => {
-                    setActive(item);
-                    setOpenMenu(false);
-                  }}
-                  className={`cursor-pointer px-3 py-2 rounded-md font-medium 
-                    ${
-                      active === item
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
+                    onClick={() => {
+                      setActive(item.name);
+                      setOpenMenu(false);
+                    }}
+                    className={`cursor-pointer px-3 py-2 rounded-md font-medium ${
+                      active === item.name
                         ? "bg-blue-50 text-blue-600"
                         : "text-gray-700 hover:bg-gray-100"
                     }`}
-                >
-                  {item}
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
+
             </ul>
 
-            {/* ⭐ BOOK NOW button (Mobile) */}
+            {/* Book Now Button (Mobile) */}
             <div className="p-4">
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold shadow-md">
                 Book Now
