@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 // @ts-ignore
 import "swiper/css";
 // @ts-ignore
@@ -46,35 +47,35 @@ export default function Hero() {
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="https://images.pexels.com/photos/27023262/pexels-photo-27023262.jpeg"
+              src="/src/assets/heroSlider/slide5.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             
             <img
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+              src="/src/assets/heroSlider/slide6.jpg"
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef"
+              src="/src/assets/heroSlider/slide7.jpg"
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+              src="/src/assets/heroSlider/slide8.jpg"
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+              src="/src/assets/heroSlider/slide9.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -110,7 +111,7 @@ export default function Hero() {
             </button>
 
             <button className="border border-white/40 backdrop-blur-lg px-8 py-3 rounded-xl text-lg font-semibold hover:bg-white/20 transition-all">
-              View Packages
+              <NavLink to="/tour">View Tours</NavLink>
             </button>
           </div>
         </div>

@@ -5,9 +5,11 @@ import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Home from './components/Home/Home.jsx'
 import Tour from './components/Tour/Tour.jsx'
+import TourDetails from './components/TourDetails.jsx'
+import Layout from './layout.jsx'
 // @ts-ignore
 import './index.css'
-import Layout from './layout.jsx'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +17,7 @@ const router = createBrowserRouter(
         <Route path='' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/tour' element={<Tour/>}/>
+        <Route path="/tour/:id" element={<TourDetails />} />
         <Route path='/contact' element={<Contact/>}/>
     </Route>
   )
