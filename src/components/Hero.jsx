@@ -81,7 +81,7 @@ export default function Hero() {
           <SwiperSlide>
             <img
               className="w-full h-full object-cover"
-              src="/src/assets/heroSlider/slide4.jpg"
+              src="https://images.pexels.com/photos/6040171/pexels-photo-6040171.jpeg"
             />
           </SwiperSlide>
 
