@@ -21,7 +21,7 @@ export default function About() {
       </div>
 
       {/* MAIN ABOUT SECTION */}
-      <div className="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-start">
 
         {/* LEFT IMAGE */}
         <img
