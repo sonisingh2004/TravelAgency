@@ -8,7 +8,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Hero() {
-  const words = ["Puri", "Goa", "Himalayas", "Bhubaneswar", "Kerala"];
+  const words = ["Puri", "Goa", "Himalayas", "Odisha", "Kerala"];
   const [index, setIndex] = useState(0);
   const [offset, setOffset] = useState(0);
 
